@@ -28,10 +28,10 @@ const styles = StyleSheet.create({
   questionNo: {
     color: 'red',
     fontSize: 25,
-    margin: 20,
+    margin: 25,
   },
   Question: {
-    fontSize: 30,
+    fontSize: 25,
     margin: 25,
   },
   nextButton: {
