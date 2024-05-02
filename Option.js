@@ -13,24 +13,14 @@ const Option = props => {
   };
   console.log(score);
   let correctAnswerIdx = Questions.questions[props.qnIndex].correctIndex;
-  // let handleValidation = () => {
-  //   if (props.optionIdx === correctAnswerIdx) {
-  //     console.log('Correct Answer');
-  //     setOptioncolor({borderColor: 'green'});
-  //   } else {
-  //     console.log('Wrong Answer');
-  //     setOptioncolor({borderColor: 'red'});
-  //   }
-  // };
   return (
     <TouchableOpacity
       onPress={() => {
         props.optionIdx === correctAnswerIdx ? updateScore(1) : updateScore(0);
         if (props.qnIndex + 1 >= Questions.questions.length) {
           console.log('End of Quiz');
-          props.navigation.navigate('CongratsScreen');
         } else {
-          props.navigation.navigate('QuestionScreen', {
+          props.navigation.navigate('soruEkrani', {
             index: props.qnIndex + 1,
           });
         }
